@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="fr">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,6 +7,7 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
+    <!-- Page d'accueil -->
     <div id="home" class="container">
         <h1>Bienvenue sur E-Class</h1>
         <p>
@@ -15,6 +16,7 @@
         <button onclick="navigateTo('login')">Se connecter</button>
     </div>
 
+    <!-- Page de connexion -->
     <div id="login" class="container hidden">
         <h1>Connexion</h1>
         <form>
@@ -25,6 +27,7 @@
         <a href="#" class="back-btn" onclick="navigateTo('home')">Retour</a>
     </div>
 
+    <!-- Page du catalogue -->
     <div id="catalog" class="container hidden">
         <h1>Catalogue de Formation</h1>
         <p>Sélectionnez les formations pour le Master Data & IA.</p>
@@ -32,6 +35,7 @@
         <a href="#" class="back-btn" onclick="navigateTo('login')">Retour</a>
     </div>
 
+    <!-- Page de choix de formation -->
     <div id="choose" class="container hidden">
         <h1>Choix de la formation</h1>
         <p>Veuillez sélectionner au moins une formation.</p>
@@ -39,6 +43,7 @@
         <a href="#" class="back-btn" onclick="navigateTo('catalog')">Retour</a>
     </div>
 
+    <!-- Page de validation du choix de formation -->
     <div id="validation" class="container hidden">
         <h1>Choix validé !</h1>
         <p>Votre choix a été validé ! Vous pouvez maintenant suivre vos compétences.</p>
@@ -46,6 +51,7 @@
         <a href="#" class="back-btn" onclick="navigateTo('choose')">Retour</a>
     </div>
 
+    <!-- Page pour suivre les compétences -->
     <div id="skills" class="container hidden">
         <h1>Suivre ses compétences</h1>
         <button onclick="navigateTo('exam')">Passer un examen</button><br><br>
@@ -56,30 +62,35 @@
         <a href="#" class="back-btn" onclick="navigateTo('validation')">Retour</a>
     </div>
 
+    <!-- Page de passer un examen -->
     <div id="exam" class="container hidden">
         <h1>Passer un examen</h1>
         <p>Ici, vous pouvez passer un examen.</p>
         <a href="#" class="back-btn" onclick="navigateTo('skills')">Retour</a>
     </div>
 
+    <!-- Page de devoir -->
     <div id="homework" class="container hidden">
         <h1>Devoir</h1>
         <p>Ici, vous pouvez soumettre vos devoirs.</p>
         <a href="#" class="back-btn" onclick="navigateTo('skills')">Retour</a>
     </div>
 
+    <!-- Page pour voir les notes -->
     <div id="grades" class="container hidden">
         <h1>Voir les notes</h1>
         <p>Consultez vos notes ici.</p>
         <a href="#" class="back-btn" onclick="navigateTo('skills')">Retour</a>
     </div>
 
+    <!-- Page de feedback -->
     <div id="feedback" class="container hidden">
         <h1>Feedback</h1>
         <p>Partagez vos commentaires sur les formations.</p>
         <a href="#" class="back-btn" onclick="navigateTo('skills')">Retour</a>
     </div>
 
+    <!-- Page FAQ -->
     <div id="faq" class="container hidden">
         <h1>FAQ</h1>
         <p>Posez toutes vos questions ici.</p>
