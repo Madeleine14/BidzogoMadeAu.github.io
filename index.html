@@ -1,100 +1,91 @@
 <!DOCTYPE html>
-<html lang="fr">
-
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>E-Class</title>
     <link rel="stylesheet" href="style.css">
 </head>
-
 <body>
-    <header>
-        <h1>E-Class</h1>
-    </header>
+    <div id="home" class="container">
+        <h1>Bienvenue sur E-Class</h1>
+        <p>
+            Sur notre plateforme, vous pouvez consulter le catalogue de formations, sélectionner les cours qui vous intéressent, suivre les leçons, passer les examens, réaliser vos devoirs, consulter vos notes, obtenir des réponses à vos questions et donner votre avis sur chaque cours auquel vous avez participé.
+        </p>
+        <button onclick="navigateTo('login')">Se connecter</button>
+    </div>
 
-    <nav>
-        <a href="#page-accueil">Accueil</a>
-        <a href="#page-connexion">Connexion</a>
-        <a href="#catalogue-formation">Catalogue de Formation</a>
-        <a href="#choix-formation">Choix de Formation</a>
-        <a href="#validation-choix">Validation Choix</a>
-        <a href="#suivre-competences">Suivre ses Compétences</a>
-        <a href="#faq">FAQ</a>
-    </nav>
-
-    <section id="page-accueil">
-        <h2>Page d'Accueil</h2>
-        <p>Sur notre plateforme, vous pouvez consulter le catalogue de formations, sélectionner les cours qui vous
-            intéressent, suivre les leçons, passer les examens, réaliser vos devoirs, consulter vos notes, obtenir des
-            réponses à vos questions et donner votre avis sur chaque cours auquel vous avez participé.</p>
-    </section>
-
-    <section id="page-connexion">
-        <h2>Page de Connexion</h2>
+    <div id="login" class="container hidden">
+        <h1>Connexion</h1>
         <form>
-            <label for="email">E-mail étudiant (obligatoire) :</label><br>
-            <input type="email" id="email" required><br><br>
-            <label for="password">Mot de passe (obligatoire) :</label><br>
-            <input type="password" id="password" required><br><br>
-            <button type="submit">Se connecter</button>
+            <input type="email" id="email" placeholder="E-mail (Obligatoire)" required><br><br>
+            <input type="password" id="password" placeholder="Mot de passe (Obligatoire)" required><br><br>
+            <button type="button" onclick="navigateTo('catalog')">Se connecter</button>
         </form>
-        <a href="#page-accueil" class="back-button">Retour</a>
-    </section>
+        <a href="#" class="back-btn" onclick="navigateTo('home')">Retour</a>
+    </div>
 
-    <section id="catalogue-formation">
-        <h2>Catalogue de Formation</h2>
-        <form>
-            <label for="formation">Sélectionnez une formation :</label><br>
-            <select id="formation">
-                <option value="powerbi">Power BI</option>
-                <option value="talend">Talend</option>
-                <option value="mysql">MySQL</option>
-                <option value="etl">ETL</option>
-            </select><br><br>
-            <button type="button" id="catalogue-continue">Continuer</button>
-        </form>
-        <a href="#page-accueil" class="back-button">Retour</a>
-    </section>
+    <div id="catalog" class="container hidden">
+        <h1>Catalogue de Formation</h1>
+        <p>Sélectionnez les formations pour le Master Data & IA.</p>
+        <button onclick="navigateTo('choose')">Continuer</button>
+        <a href="#" class="back-btn" onclick="navigateTo('login')">Retour</a>
+    </div>
 
-    <section id="choix-formation">
-        <h2>Choix de Formation</h2>
-        <form>
-            <label><input type="checkbox" value="powerbi"> Power BI</label><br>
-            <label><input type="checkbox" value="talend"> Talend</label><br>
-            <label><input type="checkbox" value="mysql"> MySQL</label><br>
-            <label><input type="checkbox" value="etl"> ETL</label><br><br>
-            <button type="button" id="choix-continue">Continuer</button>
-        </form>
-        <a href="#page-accueil" class="back-button">Retour</a>
-    </section>
+    <div id="choose" class="container hidden">
+        <h1>Choix de la formation</h1>
+        <p>Veuillez sélectionner au moins une formation.</p>
+        <button onclick="navigateTo('validation')">Continuer</button>
+        <a href="#" class="back-btn" onclick="navigateTo('catalog')">Retour</a>
+    </div>
 
-    <section id="validation-choix" style="display: none;">
-        <h2>Validation du Choix</h2>
-        <p>Votre choix a été validé ! Redirigez-vous vers la section des compétences pour commencer votre formation.</p>
-        <button onclick="location.href='#suivre-competences'">Suivre ses Compétences</button>
-        <a href="#page-accueil" class="back-button">Retour</a>
-    </section>
+    <div id="validation" class="container hidden">
+        <h1>Choix validé !</h1>
+        <p>Votre choix a été validé ! Vous pouvez maintenant suivre vos compétences.</p>
+        <button onclick="navigateTo('skills')">Suivre ses compétences</button>
+        <a href="#" class="back-btn" onclick="navigateTo('choose')">Retour</a>
+    </div>
 
-    <section id="suivre-competences" style="display: none;">
-        <h2>Suivre ses Compétences</h2>
-        <ul>
-            <li><a href="#passer-examen">Passer un Examen</a></li>
-            <li><a href="#devoirs">Devoirs</a></li>
-            <li><a href="#voir-notes">Voir les Notes</a></li>
-            <li><a href="#feedback">Feedback</a></li>
-        </ul>
-        <a href="#page-accueil" class="back-button">Retour</a>
-    </section>
+    <div id="skills" class="container hidden">
+        <h1>Suivre ses compétences</h1>
+        <button onclick="navigateTo('exam')">Passer un examen</button><br><br>
+        <button onclick="navigateTo('homework')">Devoir</button><br><br>
+        <button onclick="navigateTo('grades')">Voir les notes</button><br><br>
+        <button onclick="navigateTo('feedback')">Feedback</button><br><br>
+        <button onclick="navigateTo('faq')">Poser des questions</button>
+        <a href="#" class="back-btn" onclick="navigateTo('validation')">Retour</a>
+    </div>
 
-    <section id="faq">
-        <h2>FAQ</h2>
-        <p>Consultez les questions fréquentes ou posez une nouvelle question.</p>
-        <button>Poser une nouvelle question</button>
-        <a href="#page-accueil" class="back-button">Retour</a>
-    </section>
+    <div id="exam" class="container hidden">
+        <h1>Passer un examen</h1>
+        <p>Ici, vous pouvez passer un examen.</p>
+        <a href="#" class="back-btn" onclick="navigateTo('skills')">Retour</a>
+    </div>
+
+    <div id="homework" class="container hidden">
+        <h1>Devoir</h1>
+        <p>Ici, vous pouvez soumettre vos devoirs.</p>
+        <a href="#" class="back-btn" onclick="navigateTo('skills')">Retour</a>
+    </div>
+
+    <div id="grades" class="container hidden">
+        <h1>Voir les notes</h1>
+        <p>Consultez vos notes ici.</p>
+        <a href="#" class="back-btn" onclick="navigateTo('skills')">Retour</a>
+    </div>
+
+    <div id="feedback" class="container hidden">
+        <h1>Feedback</h1>
+        <p>Partagez vos commentaires sur les formations.</p>
+        <a href="#" class="back-btn" onclick="navigateTo('skills')">Retour</a>
+    </div>
+
+    <div id="faq" class="container hidden">
+        <h1>FAQ</h1>
+        <p>Posez toutes vos questions ici.</p>
+        <a href="#" class="back-btn" onclick="navigateTo('skills')">Retour</a>
+    </div>
 
     <script src="script.js"></script>
 </body>
-
 </html>
