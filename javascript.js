@@ -1,11 +1,14 @@
-function navigateTo(sectionId) {
-    // Cacher toutes les sections
-    const sections = document.querySelectorAll('.container');
-    sections.forEach(section => section.classList.add('hidden'));
+// Fonction pour naviguer entre les pages
+function navigateTo(page) {
+    // Masquer toutes les pages
+    const pages = document.querySelectorAll('.container');
+    pages.forEach(pageElement => {
+        pageElement.classList.add('hidden');
+    });
 
-    // Afficher la section demandée
-    const targetSection = document.getElementById(sectionId);
-    if (targetSection) {
-        targetSection.classList.remove('hidden');
+    // Afficher la page correspondante
+    const currentPage = document.getElementById(page);
+    if (currentPage) {
+        currentPage.classList.remove('hidden');
     }
 }
