@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>E-Class</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header>
+    <h1>E-Class</h1>
+  </header>
+
+  <main>
+    <!-- Page de début -->
+    <section id="start-page">
+      <div class="card">
+        <h2>Se connecter</h2>
+        <p>Sur notre plateforme, vous pouvez suivre vos formations, consulter les catalogues, et bien plus encore.</p>
+        <button onclick="navigateTo('login-page')">Se connecter</button>
+      </div>
+    </section>
+
+    <!-- Page de connexion -->
+    <section id="login-page" class="hidden">
+      <div class="card">
+        <h2>Connection</h2>
+        <form id="login-form">
+          <label for="email">E-mail étudiant (obligatoire)</label>
+          <input type="email" id="email" required>
+          <label for="password">Mot de passe (obligatoire)</label>
+          <input type="password" id="password" required>
+          <button type="submit">Se connecter</button>
+        </form>
+      </div>
+    </section>
+
+    <!-- Catalogue de formation -->
+    <section id="catalog-page" class="hidden">
+      <div class="card">
+        <h2>Catalogue de Formation</h2>
+        <form id="catalog-form">
+          <select>
+            <option>Power BI</option>
+            <option>Talend</option>
+            <option>MySQL</option>
+            <option>ETL</option>
+          </select>
+          <button type="submit">Continuer</button>
+        </form>
+      </div>
+    </section>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
