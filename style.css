@@ -2,27 +2,10 @@ body {
     font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
-    background: linear-gradient(rgba(255,255,255,0.8), rgba(255,255,255,0.8)), url('https://via.placeholder.com/1500x800') no-repeat center center fixed;
+    background: linear-gradient(rgba(255, 255, 255, 0.8), rgba(255, 255, 255, 0.8)), url('https://via.placeholder.com/1500x800') no-repeat center center fixed;
     background-size: cover;
-}
-
-.container {
-    max-width: 600px;
-    margin: 50px auto;
-    padding: 20px;
-    background: #fff;
-    border-radius: 10px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-    text-align: center;
-}
-
-h1 {
-    color: #ff6600;
-}
-
-p {
-    font-size: 1.2em;
-    margin: 20px 0;
+    line-height: 1.5; /* Correction pour définir un espacement de ligne */
+    font-size: 1em; /* Correction pour définir la taille de police */
 }
 
 button {
@@ -33,14 +16,11 @@ button {
     font-size: 1em;
     border-radius: 5px;
     cursor: pointer;
+    transition: background-color 0.3s ease; /* Correction : Ajout de la transition */
 }
 
 button:hover {
     background-color: #cc5200;
-}
-
-.hidden {
-    display: none;
 }
 
 .back-btn {
@@ -49,4 +29,8 @@ button:hover {
     text-decoration: none;
     color: #ff6600;
     font-size: 1.1em;
+}
+
+.back-btn:hover {
+    text-decoration: underline; /* Ajout d'un soulignement au survol */
 }
