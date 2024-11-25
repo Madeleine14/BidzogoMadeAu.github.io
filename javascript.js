@@ -1,8 +1,8 @@
-document.getElementById("catalogue-continue").addEventListener("click", function () {
-    alert("Vous avez sélectionné une formation !");
-});
+function navigateTo(sectionId) {
+    // Récupère toutes les sections et les masque
+    const sections = document.querySelectorAll('.container');
+    sections.forEach(section => section.classList.add('hidden'));
 
-document.getElementById("choix-continue").addEventListener("click", function () {
-    document.getElementById("choix-formation").style.display = "none";
-    document.getElementById("validation-choix").style.display = "block";
-});
+    // Affiche la section cible
+    document.getElementById(sectionId).classList.remove('hidden');
+}
